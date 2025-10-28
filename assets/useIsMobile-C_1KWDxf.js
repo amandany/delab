@@ -1,0 +1,1 @@
+import{r as e}from"./index-DIkitW1y.js";const n=({breakpoint:n})=>{const[t,r]=e.useState(!1);return e.useEffect(()=>{const e=()=>{r(window.innerWidth<=n)};return e(),window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[n]),t};export{n as u};
