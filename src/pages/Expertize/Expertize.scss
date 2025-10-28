@@ -1,0 +1,117 @@
+.expertise {
+    padding: 40px 20px;
+    margin: 0 auto;
+    min-height: 1000px;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.expertise__title {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 0px;
+    color: var(--color-accent-pink);
+
+    &--outline {
+        font-weight: var(--font-regular);
+        color: black;
+        font-style: italic;
+    }
+}
+
+.expertise__list {
+    background: #97a2bb1f;
+    --border-color: #97a2bb4d;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.expertise__item {
+    padding: 32px 40px;
+    border-top: 1px dashed var(--border-color);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 0fr;
+    align-items: center;
+    cursor: pointer;
+    .expertise__item-description {
+        margin-top: 0px;
+        transition:
+            opacity 0.3s ease-in-out 0.1s,
+            margin-top 0.1s ease-in-out 0.1s;
+    }
+}
+.expertise__item--active {
+    grid-template-rows: auto 1fr;
+
+    .expertise__item-description {
+        opacity: 1;
+    }
+}
+.expertise__item:first-child {
+    border: 1px solid transparent;
+}
+.expertise__item-header {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .text-secondary {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 6%;
+        color: var(--color-accent-pink);
+    }
+}
+
+.expertise__item-title {
+    color: var(--color-accent-pink);
+}
+
+.expertise__item-description {
+    color: var(--color-primary);
+    grid-row-start: 1;
+    grid-row-end: 4;
+    max-width: 550px;
+    flex-basis: 550px;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 900px) {
+    .expertise__item {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 32px 40px 0 40px;
+    }
+    .expertise__item-header {
+        padding-bottom: 16px;
+    }
+
+    .expertise__item-description {
+        flex-basis: unset;
+        padding-bottom: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .expertise {
+        margin-top: 100px;
+        padding: 20px 10px;
+        min-height: 700px;
+    }
+    .expertise__item-header {
+        gap: 1.5rem;
+    }
+    .expertise__item {
+        padding: 16px 20px 0 20px;
+    }
+}

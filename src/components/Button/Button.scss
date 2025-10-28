@@ -1,0 +1,271 @@
+.button {
+    position: relative;
+    width: 100%;
+    max-width: 512px;
+    height: 64px;
+    border: none;
+    border-radius: 16px;
+    font-family: var(--font-mono, "DM Mono", monospace);
+    font-size: 1rem; // 16px
+    font-weight: var(--font-medium, 500);
+    color: var(--text-primary, #f7f7f7);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    letter-spacing: var(--letter-spacing-normal, 0);
+    background: linear-gradient(135deg, #dd43f0 0%, #9c80ff 100%);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.05) 100%
+        );
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 32px rgba(221, 67, 240, 0.4);
+        background: linear-gradient(135deg, #dd43f0 0%, #9c80ff 50%, #a5f9ff 100%);
+        background-size: 200% 200%;
+        animation: gradientShiftHover 2s ease infinite;
+
+        &::after {
+            opacity: 0.7;
+        }
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 4px 16px rgba(221, 67, 240, 0.3);
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+        animation: none;
+        background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+
+        &:hover {
+            transform: none;
+            box-shadow: none;
+            background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+            animation: none;
+        }
+
+        &::after {
+            opacity: 0;
+        }
+    }
+
+    span,
+    & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #dd43f0;
+        outline-offset: 2px;
+    }
+}
+.button--loading {
+    color: transparent;
+    opacity: 0.6;
+}
+
+@keyframes gradientShiftHover {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.button--contact {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    max-width: none;
+    border-radius: 50%;
+    font-size: 1.125rem; // 18px
+    font-weight: var(--font-regular, 400);
+    background: var(--color-accent-green, #affc41);
+    color: var(--color-primary, #171a16);
+    box-shadow: 0 4px 24px rgba(175, 252, 65, 0.3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0%;
+
+    &::after {
+        display: none;
+    }
+
+    &::before {
+        display: none;
+    }
+    &:hover {
+        background: var(--color-accent-pink, #dd43f0);
+        color: var(--color-white, #ffffff);
+        transform: scale(1.05);
+        box-shadow: 0 8px 32px rgba(221, 67, 240, 0.4);
+        animation: none; // Remove gradient animation
+    }
+
+    &:active {
+        transform: scale(0.98);
+        box-shadow: 0 2px 16px rgba(221, 67, 240, 0.3);
+    }
+
+    &:disabled {
+        background: var(--color-gray-medium, #97a2bb);
+        color: var(--color-primary, #171a16);
+        opacity: 0.6;
+        transform: none;
+        box-shadow: none;
+
+        &:hover {
+            background: var(--color-gray-medium, #97a2bb);
+            color: var(--color-primary, #171a16);
+            transform: none;
+            box-shadow: none;
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-accent-green, #affc41);
+        outline-offset: 4px;
+    }
+
+    .contact-arrow {
+        position: absolute;
+        bottom: 40px;
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover .contact-arrow {
+        transform: translateY(2px);
+    }
+}
+
+@media (max-width: 768px) {
+    .button--contact {
+        width: 150px;
+        height: 150px;
+        font-size: 1rem; // 16px
+    }
+}
+@media (max-height: 890px) {
+    .button--contact {
+        width: 120px;
+        height: 120px;
+        font-size: 0.8rem; // 16px
+        .contact-arrow {
+            transform: scale(0.7);
+            bottom: 30px;
+        }
+    }
+}
+@media (max-height: 800px) {
+    .button--contact {
+        width: 120px;
+        height: 120px;
+        font-size: 0.8rem; // 16px
+        .contact-arrow {
+            transform: scale(0.7);
+            bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .button--contact {
+        width: 175px;
+        height: 175px;
+    }
+}
+
+.button--secondary {
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    background: #171a16;
+    border: 0px solid transparent;
+
+    &::after,
+    &::before {
+        display: none;
+    }
+
+    &:hover {
+        background: var(--color-accent-pink);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 16px rgba(221, 67, 240, 0.3);
+    }
+
+    &:active {
+        background: var(--color-accent-purple);
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(156, 109, 255, 0.4);
+    }
+
+    &:disabled {
+        background: linear-gradient(135deg, rgba(107, 114, 128, 0.6) 0%, rgba(156, 163, 175, 0.4) 100%);
+        border: 1px solid rgba(107, 114, 128, 0.3);
+        color: rgba(247, 247, 247, 0.5);
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+
+        &:hover {
+            background: linear-gradient(135deg, rgba(107, 114, 128, 0.6) 0%, rgba(156, 163, 175, 0.4) 100%);
+            border: 1px solid rgba(107, 114, 128, 0.3);
+            transform: none;
+            box-shadow: none;
+        }
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--color-accent-purple, #9c6dff);
+        outline-offset: 2px;
+    }
+}
+
+@media (max-width: 768px) {
+    .button--secondary {
+        max-width: 100%;
+        height: 44px;
+        font-size: 0.875rem; // 14px
+    }
+}

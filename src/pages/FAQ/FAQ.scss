@@ -1,0 +1,35 @@
+.FAQ {
+    padding: 320px 0 180px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    &-header {
+        font-weight: 500;
+        font-size: 80px;
+        line-height: 120%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        scroll-margin-top: 80px;
+        color: var(--color-accent-green);
+    }
+    &-questions-container {
+        background: #262a29;
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .FAQ {
+        padding: 240px 20px 120px 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .FAQ {
+        padding: 200px 20px 100px 20px;
+        &-header {
+            font-size: 60px;
+        }
+    }
+}

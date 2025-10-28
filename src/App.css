@@ -1,0 +1,39 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.center-container {
+  width: 100%;
+  height: 100%;
+  max-width: 1312px;
+  position: relative;
+}
+
+.build_expertise_bg {
+  overflow: hidden;
+  background-image: url("./images/BUILD_EXPERTIZE_BG.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}
+
+.contacts_bg {
+  background: var(--color-light);
+  color: #2d3436;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}

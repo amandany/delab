@@ -1,0 +1,120 @@
+.wisdom-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 320px 0;
+    gap: 44px;
+    .upper,
+    .center {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 60px;
+        line-height: 120%;
+        letter-spacing: 0%;
+    }
+    .down {
+        &-up,
+        &-lower {
+            font-weight: 500;
+            font-size: 70px;
+            line-height: 120%;
+            letter-spacing: 2%;
+            text-transform: uppercase;
+            color: var(--color-accent-pink);
+        }
+
+        &-lower {
+            font-style: italic;
+        }
+    }
+
+    .upper {
+        transform: translateX(-200px);
+    }
+    .down {
+        transform: translateX(200px);
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        justify-content: center;
+        align-items: center;
+    }
+    .wisdom-face {
+        position: absolute;
+        z-index: -1;
+        mix-blend-mode: lighten;
+        width: 420px;
+        transform: translateX(-370px) translateY(130px) scaleX(-1);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .wisdom-section {
+        .upper {
+            transform: translateX(0);
+        }
+        .down {
+            transform: translateX(0);
+        }
+        .wisdom-face {
+            width: 500px;
+            opacity: 0.6;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .wisdom-section {
+        gap: 30px;
+        .upper,
+        .center {
+            font-size: 40px;
+        }
+        .down {
+            gap: 20px;
+            text-align: center;
+            &-up,
+            &-lower {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .wisdom-section {
+        gap: 30px;
+        overflow: hidden;
+        .upper,
+        .center {
+            font-size: 30px;
+        }
+        .down {
+            gap: 16px;
+            text-align: center;
+            &-up,
+            &-lower {
+                font-size: 35px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    .wisdom-section {
+        gap: 20px;
+        .upper,
+        .center {
+            font-size: 30px;
+        }
+        .down {
+            gap: 0px;
+            text-align: center;
+            &-up,
+            &-lower {
+                font-size: 35px;
+            }
+        }
+    }
+}

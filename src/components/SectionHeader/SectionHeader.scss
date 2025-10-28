@@ -1,0 +1,33 @@
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    scroll-margin-top: 80px;
+    width: fit-content;
+    &-start {
+        font-weight: 300;
+        font-style: italic;
+        font-size: 60px;
+        line-height: 120%;
+        letter-spacing: 2%;
+        color: var(--color-white);
+    }
+    &-end {
+        font-weight: 400;
+        font-size: 60px;
+        line-height: 120%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        color: var(--color-accent-green);
+    }
+    @media screen and (max-width: 520px) {
+        &-start , &-end{
+            font-size: 40px;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        &-start , &-end{
+            font-size: 32px;
+        }
+    }
+}

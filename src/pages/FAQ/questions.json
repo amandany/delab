@@ -1,0 +1,66 @@
+[
+  {
+    "question": "How long does development take?",
+    "answer": "Our Web3 development services include building an <purple>MVP</purple> (minimum viable product) to let you test your concept out and make more informed investment decisions. MVP development takes <purple>2-4 weeks</purple>. And then, the development time depends on the complexity of the project."
+  },
+  {
+    "question": "What blockchains do you support?",
+    "answer": "Ethereum, L2 rollups (Base, Arbitrum, Optimism etc.), Solana, Binance Smart Chain, Sui, Polygon, Ton. We can also help you integrate with other blockchains as needed."
+  },
+  {
+    "question": "How much does MVP cost?",
+    "answer": "We run projects in weekly sprints. One sprint starts from <pink>$2000</pink>. <purple>MVP</purple> will be deployed to the production server in 2-4 weeks, so the total cost will start from <pink>$4000</pink>."
+  },
+  {
+    "question": "What types of Web3 projects do you develop?",
+    "answer": "We specialize in <purple>DeFi platforms</purple>, NFT marketplaces, DAOs, token launches, DApps, smart contracts, and Web3 integrations. From simple token swaps to complex multi-chain protocols."
+  },
+  {
+    "question": "Do you provide smart contract auditing?",
+    "answer": "Yes, we conduct thorough smart contract audits to ensure security and gas optimization. All contracts undergo <purple>comprehensive testing</purple> before deployment to mainnet."
+  },
+  {
+    "question": "What's included in the MVP package?",
+    "answer": "MVP includes frontend development, smart contract deployment, wallet integration, basic UI/UX, testing on testnet, and deployment to production."
+  },
+  {
+    "question": "Do you offer ongoing maintenance and support?",
+    "answer": "Absolutely! We provide ongoing maintenance, updates, bug fixes, and feature additions. Our support packages start from <pink>$500/month</pink> depending on project complexity."
+  },
+  {
+    "question": "Can you help with tokenomics and project strategy?",
+    "answer": "Yes, we offer consultation on <purple>tokenomics design</purple>, project roadmaps, go-to-market strategies, and Web3 best practices to ensure your project's success."
+  },
+  {
+    "question": "Do you provide market making services?",
+    "answer": "Yes, we offer <purple>professional market making</purple> services for tokens and DeFi protocols. We provide liquidity, maintain tight spreads, and ensure stable trading conditions across multiple DEXs and centralized exchanges."
+  },
+  {
+    "question": "What does your market making service include?",
+    "answer": "Our market making includes <purple>automated trading bots</purple>, price stabilization, volume generation, cross-exchange arbitrage, and real-time market monitoring. We help maintain <pink>healthy trading conditions</pink> for your token."
+  },
+  {
+    "question": "Which exchanges do you support for market making?",
+    "answer": "We provide market making on major DEXs like Uniswap, PancakeSwap, SushiSwap, and centralized exchanges including Binance, KuCoin, Gate.io, and others. <purple>Multi-exchange strategy</purple> ensures optimal liquidity distribution."
+  },
+  {
+    "question": "What wallet integrations do you support?",
+    "answer": "We integrate with MetaMask, WalletConnect, Phantom, Coinbase Wallet, Trust Wallet, and other popular wallets. <purple>Multi-wallet support</purple> comes standard."
+  },
+  {
+    "question": "Do you handle UI/UX design?",
+    "answer": "Yes, our team includes Web3-specialized designers who create intuitive interfaces optimized for blockchain interactions and <purple>user-friendly</purple> crypto experiences."
+  },
+  {
+    "question": "What about gas optimization?",
+    "answer": "We prioritize gas efficiency in all smart contracts, implementing best practices to minimize transaction costs while maintaining functionality and security."
+  },
+  {
+    "question": "Can you migrate existing projects to Web3?",
+    "answer": "Definitely! We help traditional web applications integrate blockchain features, migrate to decentralized architecture, or add <purple>Web3 functionality</purple> to existing platforms."
+  },
+  {
+    "question": "How do you ensure project security?",
+    "answer": "We follow industry security standards, conduct code reviews, perform penetration testing, and implement <purple>multi-signature wallets</purple> and other security measures."
+  }
+]

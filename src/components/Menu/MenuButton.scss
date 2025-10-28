@@ -1,0 +1,91 @@
+.animated-menu-button {
+    position: relative;
+    overflow: hidden;
+    width: 100px;
+    height: 44px;
+    border: none;
+    outline: none;
+
+    cursor: pointer;
+    color: #333;
+    background: transparent;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+    .menu-text,
+    .menu-cross {
+        color: var(--color-gray-light);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition:
+            opacity 0.4s ease,
+            transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+            color 0.2s linear;
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 100%;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+
+        &:hover {
+            color: var(--color-accent-green);
+            path {
+                stroke: var(--color-accent-green);
+            }
+        }
+    }
+
+    .menu-text {
+        opacity: 1;
+        transform: translateY(0);
+        transition: all 0.2s ease-in;
+    }
+
+    .menu-cross {
+        opacity: 0;
+        transform: translateY(100%);
+
+        path {
+            stroke: var(--color-gray-light);
+            stroke-width: 8;
+            stroke-linecap: round;
+
+            stroke-dasharray: 90;
+            stroke-dashoffset: 90;
+            transition: stroke-dashoffset 0.4s ease-in-out;
+        }
+    }
+
+    &.open {
+        .menu-text {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+
+        .menu-cross {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.1s;
+
+            path {
+                stroke-dashoffset: 0;
+
+                &:last-child {
+                    transition-delay: 0.2s;
+                }
+            }
+        }
+    }
+}

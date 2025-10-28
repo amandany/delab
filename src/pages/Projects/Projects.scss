@@ -1,0 +1,31 @@
+.projects-section {
+    padding: 200px 0 400px 0;
+    // min-height: 1300px;
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .projects-scroll-wrapper {
+        background: gray;
+        margin-top: 8px;
+        height: 2px;
+    }
+    .projects-scroll {
+        height: 2px;
+        background: var(--color-accent-purple);
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .projects-section {
+        padding: 20px 20px 100px 20px;
+    }
+}
+@media screen and (max-width: 940px) {
+    .projects-section {
+        .projects-container {
+            gap: 40px;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "title": "SMART CONTRACTS",
+    "description": "We design and develop secure, efficient smart contracts for a wide range of blockchain use cases — from DeFi and NFTs to DAOs and token launches. Our focus is on reliability, gas optimization, and audit-ready code"
+  },
+  {
+    "title": "SOLANA, ETHEREUM, EVM",
+    "description": "We build high-performance blockchain applications on Solana and Ethereum, using each platform’s unique strengths. With deep expertise in the Ethereum Virtual Machine (EVM) — the engine that runs smart contracts on Ethereum-compatible blockchains — we create secure, efficient dApps that can scale and operate across multiple networks"
+  },
+  {
+    "title": "FRONTEND",
+    "description": "We build fast, user-friendly, and secure interfaces for dApps and Web3 platforms. Our expertise includes wallet integrations (MetaMask, Phantom, etc.), seamless interaction with blockchains using Web3/Ethers.js, and delivering intuitive UX for crypto products of any complexity"
+  },
+  {
+    "title": "PROFESSIONAL MARKET MAKING",
+    "description": "We design and implement sophisticated market making strategies for tokens across multiple exchanges. Our algorithms provide continuous liquidity, optimize spreads, and maintain healthy trading conditions. From DEX liquidity pools to CEX order books, our focus is on maximizing trading volume, minimizing slippage, and ensuring your token maintains strong market presence 24/7"
+  },
+  {
+    "title": "WEB3 MIGRATION",
+    "description": "We help traditional web applications transition to Web3 by integrating blockchain features, migrating to decentralized architectures, or adding smart contract functionality. Our migration services ensure a smooth transition with minimal disruption"
+  },
+  {
+    "title": "TELEGRAM BOTS",
+    "description": "We create smart, fast, and reliable Telegram bots tailored to your business needs — from automated customer support to crypto integrations and Web3 interactions. Our bots are designed for high performance, seamless UX, and easy scalability"
+  },
+  {
+    "title": "AUDIT-READY CODE",
+    "description": "We write clean, secure, and optimized smart contracts that meet industry audit standards. Our development process includes thorough testing, best practices, and documentation to ensure your code is ready for any third-party security audit"
+  }
+]

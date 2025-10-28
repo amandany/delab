@@ -1,0 +1,139 @@
+@use "sass:color";
+
+$background-dark: #111827;
+$background-light: #f9fafb;
+$shadow-color: rgba(165, 16, 185, 0.3);
+$center-opacity: 0.2;
+$font: 25px;
+
+.circular-text-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.circular-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotate var(--animation-duration, 20s) linear infinite;
+
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.circular-text {
+    font-family: "Arial", "Helvetica", sans-serif;
+    font-weight: bold;
+    font-size: $font;
+    fill: var(--color-accent-green);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: fill 0.6s ease;
+    cursor: default;
+    textPath {
+        stroke: #3e6900;
+        fill: var(--color-accent-green);
+    }
+    &:hover {
+        fill: var(--color-accent-pink);
+    }
+}
+
+.circular-text-container {
+    &--light {
+        background-color: $background-light;
+
+        .circular-text {
+            fill: color.adjust(#affc41, $lightness: -10%);
+        }
+    }
+}
+
+.circular-text-wrapper {
+    &--fast {
+        --animation-duration: 10s;
+    }
+
+    &--slow {
+        --animation-duration: 40s;
+    }
+
+    &--reverse {
+        .circular-svg {
+            animation-direction: reverse;
+        }
+    }
+
+    &--paused {
+        .circular-svg {
+            animation-play-state: paused;
+        }
+    }
+}
+
+.circular-text-container {
+    &--blue {
+        .circular-text {
+            fill: #3b82f6;
+            filter: drop-shadow(0 0 5px rgba(59, 130, 246, 0.3));
+        }
+    }
+
+    &--purple {
+        .circular-text {
+            fill: #8b5cf6;
+            filter: drop-shadow(0 0 5px rgba(139, 92, 246, 0.3));
+        }
+    }
+
+    &--red {
+        .circular-text {
+            fill: #ef4444;
+            filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.3));
+        }
+    }
+}
+
+.circular-text-container {
+    &--small {
+        .circular-text {
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+    }
+
+    &--large {
+        .circular-text {
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+    }
+}
+
+@media print {
+    .circular-text-container {
+        background-color: white;
+
+        .circular-text {
+            fill: black;
+            filter: none;
+        }
+
+        .circular-svg {
+            animation: none;
+        }
+    }
+}
+
+.circular-text-wrapper {
+    &--tilt-strong-forward {
+        transform: perspective(600px) rotateX(30deg) rotateY(15deg);
+        transform-style: preserve-3d;
+    }
+}
